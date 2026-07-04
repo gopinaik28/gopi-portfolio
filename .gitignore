@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Environment / secrets
+.env
+.env.local
+*.key
+*.pem
+
+# Build outputs
+dist/
+build/
+node_modules/
+
+# Private docs
+assets/resume/*.pdf

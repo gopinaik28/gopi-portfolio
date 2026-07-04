@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gopi Naik — AI Consultant &amp; Builder</title>
+<meta name="description" content="Dhanavath Gopi Naik — AI Consultant at Kotak Education Foundation. I build intelligent systems that solve real problems: multi-agent AI, LLMs, RAG pipelines, and AI for social impact."/>
+<meta property="og:title" content="Gopi Naik — AI Consultant &amp; Builder"/>
+<meta property="og:description" content="From geospatial intelligence engines to AI tools for 10,000+ students — I turn cutting-edge AI into real-world impact."/>
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+<meta property="og:image" content="assets/images/og-image.png"/>
+<!-- CSS: load order matters — main tokens first, then components -->
+<link rel="stylesheet" href="assets/css/main.css"/>
+<link rel="stylesheet" href="assets/css/nav.css"/>
+<link rel="stylesheet" href="assets/css/hero.css"/>
+<link rel="stylesheet" href="assets/css/sections.css"/>
+<link rel="stylesheet" href="assets/css/dark-mode.css"/>
+<link rel="stylesheet" href="assets/css/chatbot.css"/>
+</head>
+<body>
+
+<!-- BACKGROUND AUDIO -->
+<audio id="bg-audio" loop preload="auto">
+  <source src="assets/audio/gopi-audio.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- SCROLL PROGRESS BAR -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ANIMATED AURORA BACKGROUND -->
+<div class="bg-mesh" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div class="eg-shape eg-shape-1"></div>
+  <div class="eg-shape eg-shape-2"></div>
+  <div class="eg-shape eg-shape-3"></div>
+  <div class="eg-shape eg-shape-4"></div>
+  <div class="eg-shape eg-shape-5"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Gopi</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="dark-toggle" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <h1>
+      Building <span class="accent">AI Products</span> for<br>
+      Education, Retail&nbsp;&amp;&nbsp;Agriculture.
+    </h1>
+    <div class="hero-roles">
+      <span>Founder</span>
+      <span class="role-dot">•</span>
+      <span>AI Consultant</span>
+    </div>
+
+    <!-- CURRENTLY BUILDING STATUS -->
+    <div class="currently-building">
+      <span class="building-dot"></span>
+      <span class="building-label">Currently building</span>
+      <span class="building-sep">·</span>
+      <span class="building-text">Rythu AI v2 — voice crop advisory for farmers</span>
+    </div>
+
+    <p class="hero-sub">
+      I work on AI that goes beyond demos — intelligent systems designed around real users, real decisions, and outcomes that actually matter.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work →</a>
+      <a href="#contact" class="btn-secondary">↗ Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-target="10000" data-suffix="+" data-comma="1">0</div>
+        <div class="hero-stat-label">Students Impacted</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-target="500" data-suffix="+">0</div>
+        <div class="hero-stat-label">Neighborhoods Analyzed</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-target="4" data-suffix="+">0</div>
+        <div class="hero-stat-label">Production AI Projects</div>
+      </div>
+    </div>
+    <div class="hero-founder-badge">
+      <span class="founder-badge-dot">⚡</span>
+      <span>Founder of <strong>Rythu AI</strong> — AI farming platform live at rythuai.in</span>
+    </div>
+    <div class="hero-console" aria-label="AI builder profile console">
+      <div class="console-top">
+        <span></span><span></span><span></span>
+        <strong>gopi.agent</strong>
+      </div>
+      <div class="console-lines">
+        <p><span>&gt;</span> analyzing_builder_profile()</p>
+        <p><span>&gt;</span> domain = "LLMs + RAG + Multi-Agent AI"</p>
+        <p><span>&gt;</span> deployed_for = ["farmers", "students", "retail strategy"]</p>
+        <p><span>&gt;</span> status = "available for high-impact AI work"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN — 3D floating avatar -->
+  <div class="hero-visual">
+    <div class="avatar-3d" id="hero-avatar">
+      <div class="avatar-float-wrap">
+        <!-- Spinning rings -->
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring avatar-ring-2"></div>
+
+        <!-- Glass avatar circle -->
+        <div class="avatar-inner">
+          <video autoplay muted loop playsinline class="avatar-video">
+            <source src="assets/images/gopi2.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Orbiting tech badges -->
+        <div class="orbit-badge orbit-1">Multi-Agent AI</div>
+        <div class="orbit-badge orbit-2">LLMs</div>
+        <div class="orbit-badge orbit-3">Python</div>
+        <div class="orbit-badge orbit-4">RAG</div>
+        <div class="orbit-badge orbit-5">Geospatial</div>
+        <div class="orbit-badge orbit-6">CrewAI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap fade-up">
+      <div class="about-avatar">
+        <img src="assets/images/Image2.png" alt="Gopi Naik">
+      </div>
+    </div>
+    <div class="about-text fade-up">
+      <div class="section-label">About Me</div>
+      <h2>Obsessed with what's possible.<br>Grounded in what works.</h2>
+      <p>Most AI stops at impressive. I'm more interested in <strong>useful</strong> — the kind that quietly solves real problems and makes people wonder how they ever worked without it.</p>
+
+      <!-- Career Path — compact chain -->
+      <div class="about-journey">
+        <div class="journey-label">Career Path</div>
+        <div class="journey-chain">
+          <span class="jc-node">🎓 JNTU</span>
+          <span class="jc-arrow">→</span>
+          <span class="jc-node">Jio Institute</span>
+          <span class="jc-arrow">→</span>
+          <span class="jc-node">🌏 NTU Singapore</span>
+          <span class="jc-arrow">→</span>
+          <span class="jc-node">💼 Fynd</span>
+          <span class="jc-arrow">→</span>
+          <span class="jc-node">Kotak Foundation</span>
+          <span class="jc-arrow">→</span>
+          <span class="jc-node jc-current">⚡ Rythu AI</span>
+        </div>
+      </div>
+
+      <p>I'm also the founder of <strong>Rythu AI</strong> — a full-stack AI farming companion for Telangana's farmers, with bilingual chat, crop disease detection, government scheme matching, and daily farming guidance. Because expert knowledge shouldn't be a privilege.</p>
+      <div class="about-pills">
+        <span class="pill">Multi-Agent AI</span>
+        <span class="pill">LLM Engineering</span>
+        <span class="pill">RAG Pipelines</span>
+        <span class="pill">Geospatial AI</span>
+        <span class="pill">AI for Social Good</span>
+        <span class="pill">EdTech</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header fade-up">
+    <div class="section-label">Capabilities</div>
+    <h2>Skills &amp; Tech Stack</h2>
+    <p class="section-intro">A full-stack AI toolkit — from model building to production deployment. I work across the entire lifecycle.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card fade-up">
+      <div class="skill-card-header">
+        <div class="skill-icon">🤖</div>
+        <h3>LLM &amp; Generative AI</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">CrewAI</span>
+        <span class="skill-tag">Llama 3</span>
+        <span class="skill-tag">Gemini API</span>
+        <span class="skill-tag">Prompt Engineering</span>
+        <span class="skill-tag">RAG Pipelines</span>
+        <span class="skill-tag">OpenAI</span>
+      </div>
+      <span class="skill-level skill-level-advanced">Advanced</span>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-card-header">
+        <div class="skill-icon">🧠</div>
+        <h3>Multi-Agent Systems</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Agent Orchestration</span>
+        <span class="skill-tag">CrewAI</span>
+        <span class="skill-tag">Tool Use</span>
+        <span class="skill-tag">Memory Systems</span>
+        <span class="skill-tag">Autonomous Agents</span>
+      </div>
+      <span class="skill-level skill-level-advanced">Advanced</span>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-card-header">
+        <div class="skill-icon">🐍</div>
+        <h3>Programming &amp; Data</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Streamlit</span>
+        <span class="skill-tag">FastAPI</span>
+      </div>
+      <span class="skill-level skill-level-advanced">Advanced</span>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-card-header">
+        <div class="skill-icon">📊</div>
+        <h3>Analytics &amp; Visualization</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Data Storytelling</span>
+        <span class="skill-tag">Dashboard Design</span>
+        <span class="skill-tag">ML Metrics</span>
+      </div>
+      <span class="skill-level skill-level-intermediate">Intermediate</span>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-card-header">
+        <div class="skill-icon">🚀</div>
+        <h3>AI Consulting &amp; Strategy</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Use-Case Discovery</span>
+        <span class="skill-tag">AI Roadmapping</span>
+        <span class="skill-tag">Stakeholder Mgmt</span>
+        <span class="skill-tag">EdTech AI</span>
+      </div>
+      <span class="skill-level skill-level-advanced">Advanced</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header fade-up">
+    <div class="section-label">Featured Work</div>
+    <h2>Projects that move the needle</h2>
+    <p class="section-intro">Real problems. Real solutions. Real impact — measured in accuracy, adoption, and lives touched.</p>
+  </div>
+  <div class="projects-grid">
+
+    <!-- RYTHU AI — FEATURED -->
+    <div class="project-card featured fade-up">
+      <div class="project-visual visual-rythu">
+        <img src="assets/images/rythu-ai.jpg" alt="Rythu AI" class="project-img">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <div>
+            <span class="project-tag">⭐ Founder Project</span>
+            <h3>Rythu AI — AI Farming Companion for Telangana</h3>
+          </div>
+          <div class="project-links">
+            <a href="https://www.rythuai.in" target="_blank" class="project-link" title="Live site">↗</a>
+          </div>
+        </div>
+        <div class="project-psi">
+          <div class="psi-row">
+            <span class="psi-label">Problem</span>
+            <span class="psi-text">Small and marginal farmers in Telangana make critical decisions — crop choice, disease treatment, scheme applications — without access to expert guidance, in a language they actually speak.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Solution</span>
+            <span class="psi-text">Built a full-stack AI platform with <strong>bilingual chat (Telugu/English) + voice I/O</strong>, computer vision for crop disease detection & paddy quality grading, eligibility checking across <strong>15 government schemes</strong>, weather-aware daily task planner, and automated 7 AM farming reminders.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Impact</span>
+            <span class="psi-text">Live at rythuai.in with a freemium model (₹100/month VIP). Possibly the <strong>first Telugu-language agri-tech platform</strong> powered by AI — bringing expert farming intelligence to rural Telangana in the farmer's own language.</span>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="stack-tag">Gemini 2.5 Flash</span><span class="stack-tag">React</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Firebase</span><span class="stack-tag">Computer Vision</span><span class="stack-tag">Google Cloud TTS</span><span class="stack-tag">Razorpay</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI NEWSBOT -->
+    <div class="project-card project-card-row fade-up">
+      <div class="project-visual-sm">
+        <img src="assets/images/newsbot.jpg" alt="AI Newsbot" class="project-img">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <span class="project-tag">Multi-Agent · Automation</span>
+          <div class="project-links">
+            <a href="https://github.com/gopinaik28/AI-Newsbot" target="_blank" class="project-link">↗</a>
+          </div>
+        </div>
+        <h3>AI Newsbot — Autonomous Daily AI Digest</h3>
+        <div class="project-psi">
+          <div class="psi-row">
+            <span class="psi-label">Problem</span>
+            <span class="psi-text">Tracking AI breakthroughs across industries means 30–60 minutes of daily searching, filtering noise, and reading scattered articles — most people miss it or waste time doing it manually.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Solution</span>
+            <span class="psi-text"><strong>5 specialized agents</strong> work in sequence every night — Hunter searches 8 sectors, Analyst filters noise, Writer summarizes, Designer builds the HTML email, Sender delivers to all subscribers. Fully automated at 9 PM via GitHub Actions.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Impact</span>
+            <span class="psi-text">Saves <strong>30–60 min/day</strong> per subscriber. Runs 365 days a year, zero human involvement, <strong>$0 infrastructure cost</strong> on GitHub Actions + Gemini free tier.</span>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="stack-tag">CrewAI</span><span class="stack-tag">Gemini 2.5 Flash</span><span class="stack-tag">Exa Search API</span><span class="stack-tag">Python</span><span class="stack-tag">GitHub Actions</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI POLICY ANALYZER -->
+    <div class="project-card project-card-row fade-up">
+      <div class="project-visual-sm">
+        <img src="assets/images/policy.jpg" alt="AI Policy Analyzer" class="project-img">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <span class="project-tag">RAG • NLP</span>
+          <div class="project-links">
+            <a href="https://github.com/gopinaik28" target="_blank" class="project-link">↗</a>
+          </div>
+        </div>
+        <h3>AI Policy Compliance Analyzer</h3>
+        <div class="project-psi">
+          <div class="psi-row">
+            <span class="psi-label">Problem</span>
+            <span class="psi-text">Compliance teams spend hundreds of hours manually reading policy documents to flag risks.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Solution</span>
+            <span class="psi-text">RAG pipeline that ingests <strong>50+ policy documents</strong> and surfaces compliance gaps through natural language queries.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Impact</span>
+            <span class="psi-text">Compressed multi-day review cycles into <strong>minutes</strong>.</span>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="stack-tag">RAG</span><span class="stack-tag">LangChain</span><span class="stack-tag">Vector DB</span><span class="stack-tag">Python</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GEOSPATIAL ENGINE -->
+    <div class="project-card project-card-row fade-up">
+      <div class="project-visual-sm">
+        <img src="assets/images/geospatial.jpg" alt="Geospatial Engine" class="project-img">
+      </div>
+      <div class="project-body">
+        <div class="project-top">
+          <span class="project-tag">Production • Fynd</span>
+          <div class="project-links">
+            <a href="https://github.com/gopinaik28" target="_blank" class="project-link">↗</a>
+          </div>
+        </div>
+        <h3>Geospatial Intelligence Engine</h3>
+        <div class="project-psi">
+          <div class="psi-row">
+            <span class="psi-label">Problem</span>
+            <span class="psi-text">Retail expansion teams rely on manual research that takes weeks per city — with no consistent, data-driven framework for evaluating neighborhoods.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Solution</span>
+            <span class="psi-text">Built an H3-indexed scoring engine pulling <strong>15+ data sources</strong> to rank 500+ neighborhoods across 3 cities automatically.</span>
+          </div>
+          <div class="psi-row">
+            <span class="psi-label">Impact</span>
+            <span class="psi-text">Delivered a working proof-of-concept scoring 500+ neighborhoods — validated the approach and demonstrated strong potential for production deployment.</span>
+          </div>
+        </div>
+        <div class="project-stack">
+          <span class="stack-tag">H3 Indexing</span><span class="stack-tag">Gemini API</span><span class="stack-tag">Google Maps API</span><span class="stack-tag">Python</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-header fade-up">
+    <div class="section-label">Career Timeline</div>
+    <h2>Experience &amp; Education</h2>
+    <p class="section-intro">A career progression story — each step intentionally expanding what I could build and the scale of its impact.</p>
+  </div>
+
+  <div class="act-timeline" id="act-timeline">
+    <div class="act-entries" id="act-entries">
+
+      <!-- RACE START GATE -->
+      <div class="race-gate race-gate-start">
+        <div class="race-gate-anchor">
+          <div class="f1-panel">
+            <div class="f1-panel-lights">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="race-gate-content">
+          <div class="race-bar-start">
+            <span class="race-line"></span>
+            <span class="race-badge-start">▶ RACE START</span>
+            <span class="race-line"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1. B.TECH — race starts here -->
+      <div class="act-entry act-entry-degree">
+        <div class="act-left">
+          <div class="act-dot-wrap"><div class="act-dot"></div></div>
+          <div class="act-year">2020<br>2024</div>
+        </div>
+        <div class="act-content fade-up">
+          <div class="act-card">
+            <span class="timeline-tag tag-edu">Degree</span>
+            <h3>B.Tech in Information Technology</h3>
+            <div class="timeline-org">JNTU Hyderabad</div>
+            <ul>
+              <li>Core computer science foundation: Data Structures, Algorithms, Databases, Software Engineering</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. JIO INSTITUTE -->
+      <div class="act-entry act-entry-pgp">
+        <div class="act-left">
+          <div class="act-dot-wrap"><div class="act-dot"></div></div>
+          <div class="act-year">2025<br>2026</div>
+        </div>
+        <div class="act-content fade-up">
+          <div class="act-card">
+            <span class="timeline-tag tag-edu">PGP</span>
+            <h3>PGP in AI &amp; Data Science</h3>
+            <div class="timeline-org">Jio Institute, India</div>
+            <ul>
+              <li>Specialized in ML, Deep Learning, LLMs, Agentic AI, and Generative AI</li>
+              <li>Built production-grade AI applications and multi-agent systems</li>
+              <li>15-day AI in Business program at <strong>NTU Singapore</strong> — international exposure to AI strategy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. FYND -->
+      <div class="act-entry act-entry-intern">
+        <div class="act-left">
+          <div class="act-dot-wrap"><div class="act-dot"></div></div>
+          <div class="act-year">Sep–Nov<br>2025</div>
+        </div>
+        <div class="act-content fade-up">
+          <div class="act-card">
+            <span class="timeline-tag tag-work">Internship</span>
+            <h3>AI Engineering Intern</h3>
+            <div class="timeline-org">Fynd</div>
+            <ul>
+              <li>Built a production <strong>Geospatial Intelligence Engine</strong> for retail expansion</li>
+              <li>Integrated <strong>15+ data sources</strong> via H3 indexing — scored 500+ neighborhoods</li>
+              <li>Proof-of-concept validated across 500+ neighborhoods — strong signal for a production-ready scoring system</li>
+            </ul>
+            <div class="tl-stack">
+              <span>H3 Indexing</span><span>Gemini API</span><span>Google Maps</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. KOTAK -->
+      <div class="act-entry act-entry-active">
+        <div class="act-left">
+          <div class="act-dot-wrap"><div class="act-dot"></div></div>
+          <div class="act-year">2026<br>Present</div>
+        </div>
+        <div class="act-content fade-up">
+          <div class="act-card">
+            <span class="timeline-tag tag-ongoing">Ongoing</span>
+            <h3>AI Consultant</h3>
+            <div class="timeline-org">Kotak Education Foundation · Pedtech AI Initiative</div>
+            <ul>
+              <li>Architecting AI solutions serving <strong>10,000+ students</strong></li>
+              <li>Building dashboards, automation workflows, and AI-powered learning tools</li>
+              <li>Leading AI use-case discovery and implementation strategy</li>
+            </ul>
+            <div class="tl-stack">
+              <span>AI Strategy</span><span>LLMs</span><span>Automation</span><span>EdTech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. RYTHU AI — race ends here -->
+      <div class="act-entry act-entry-founder">
+        <div class="act-left">
+          <div class="act-dot-wrap"><div class="act-dot"></div></div>
+          <div class="act-year">2026<br>Present</div>
+        </div>
+        <div class="act-content fade-up">
+          <div class="act-card">
+            <span class="timeline-tag tag-founder">⚡ Founder</span>
+            <h3>Rythu AI — Founder &amp; Builder</h3>
+            <div class="timeline-org">Independent Venture · rythuai.in</div>
+            <ul>
+              <li>Full-stack AI farming platform — bilingual chat (Telugu/English), crop disease detection, paddy grading, 15-scheme eligibility checker</li>
+              <li>Designed end-to-end <strong>multi-agent AI system</strong> with LLMs, RAG, STT/TTS, and computer vision</li>
+              <li>Built and deployed independently — idea to production</li>
+              <li>Freemium model (₹100/month VIP) with Razorpay integration</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Gemini 2.5 Flash</span><span>React</span><span>FastAPI</span><span>Firebase</span><span>RAG</span><span>Computer Vision</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RACE FINISH GATE -->
+      <div class="race-gate race-gate-finish">
+        <div class="race-gate-anchor">
+          <div class="race-flag-icon">🏁</div>
+        </div>
+        <div class="race-gate-content">
+          <div class="race-bar-finish">
+            <span class="race-line"></span>
+            <span class="race-badge-finish">🏁 FINISH LINE</span>
+            <span class="race-line"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll-driven line + car vehicle -->
+    <div class="act-line-wrap">
+      <div class="act-line-track"></div>
+      <div class="act-line-fill" id="act-line-fill"></div>
+      <div class="act-vehicle-wrap" id="act-vehicle">
+        <div class="act-exhaust">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="act-vehicle-car">
+          <svg viewBox="0 0 40 72" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Nose tip -->
+            <path d="M19 0 L21 0 L23 9 L17 9Z" fill="#EF4444"/>
+            <!-- Nose bridge -->
+            <path d="M17 9 L23 9 L25 15 L15 15Z" fill="#DC2626"/>
+            <!-- Front wing main -->
+            <path d="M3 12 L37 12 L35 17 L5 17Z" fill="#991B1B"/>
+            <!-- Front wing endplates -->
+            <rect x="3"  y="11" width="2.5" height="8" rx="1" fill="#6B0000"/>
+            <rect x="34.5" y="11" width="2.5" height="8" rx="1" fill="#6B0000"/>
+            <!-- Body -->
+            <path d="M5 17 L35 17 L37 54 L3 54Z" fill="#DC2626"/>
+            <!-- Cockpit surround raised -->
+            <path d="M14 19 L26 19 L27 50 L13 50Z" fill="#C81C1C"/>
+            <!-- Sidepod air intakes -->
+            <rect x="4"  y="21" width="4" height="7" rx="1" fill="#0F172A" opacity="0.75"/>
+            <rect x="32" y="21" width="4" height="7" rx="1" fill="#0F172A" opacity="0.75"/>
+            <!-- Windshield -->
+            <rect x="15" y="19" width="10" height="7" rx="2" fill="#7DD3FC" opacity="0.75"/>
+            <!-- Halo arch -->
+            <path d="M15 24 Q20 20.5 25 24 L25 26 Q20 22.5 15 26Z" fill="#9CA3AF" opacity="0.85"/>
+            <!-- Cockpit dark interior -->
+            <path d="M15 27 L25 27 L26 48 L14 48Z" fill="#0F172A"/>
+            <!-- Helmet base -->
+            <ellipse cx="20" cy="36" rx="4.5" ry="5" fill="#1E3A8A"/>
+            <!-- Helmet visor (gold) -->
+            <path d="M15.5 34 Q20 30 24.5 34 L24 37.5 L16 37.5Z" fill="#FCD34D" opacity="0.90"/>
+            <!-- Visor glint -->
+            <path d="M17 33 Q20 31 23 33 L22.5 34.5 L17.5 34.5Z" fill="white" opacity="0.30"/>
+            <!-- Center spine -->
+            <rect x="19.5" y="15" width="1" height="39" rx="0.5" fill="rgba(255,255,255,0.16)"/>
+            <!-- Rear diffuser -->
+            <path d="M3 54 L37 54 L35 61 L5 61Z" fill="#991B1B"/>
+            <!-- Rear wing pillars -->
+            <rect x="13" y="53" width="3" height="10" rx="1" fill="#B91C1C"/>
+            <rect x="24" y="53" width="3" height="10" rx="1" fill="#B91C1C"/>
+            <!-- Rear wing main plane -->
+            <rect x="1" y="61" width="38" height="5" rx="2" fill="#7F1D1D"/>
+            <!-- Rear wing endplates -->
+            <rect x="1"  y="59" width="2.5" height="9" rx="1" fill="#6B0000"/>
+            <rect x="36.5" y="59" width="2.5" height="9" rx="1" fill="#6B0000"/>
+            <!-- Exhaust glow -->
+            <ellipse cx="14.5" cy="59" rx="2.2" ry="1.4" fill="#FB923C" opacity="0.95"/>
+            <ellipse cx="25.5" cy="59" rx="2.2" ry="1.4" fill="#FB923C" opacity="0.95"/>
+            <!-- Front left tyre -->
+            <rect x="0"   y="11" width="4" height="13" rx="2"   fill="#111827"/>
+            <rect x="0.5" y="12" width="3" height="11" rx="1.5" fill="#1F2937"/>
+            <rect x="1"   y="13" width="2" height="9"  rx="1"   fill="#374151"/>
+            <!-- Front right tyre -->
+            <rect x="36"   y="11" width="4" height="13" rx="2"   fill="#111827"/>
+            <rect x="36.5" y="12" width="3" height="11" rx="1.5" fill="#1F2937"/>
+            <rect x="37"   y="13" width="2" height="9"  rx="1"   fill="#374151"/>
+            <!-- Rear left tyre (wider) -->
+            <rect x="0"   y="44" width="4.5" height="15" rx="2.25" fill="#111827"/>
+            <rect x="0.5" y="45" width="3.5" height="13" rx="1.75" fill="#1F2937"/>
+            <rect x="1"   y="46" width="2.5" height="11" rx="1.25" fill="#374151"/>
+            <!-- Rear right tyre (wider) -->
+            <rect x="35.5" y="44" width="4.5" height="15" rx="2.25" fill="#111827"/>
+            <rect x="36"   y="45" width="3.5" height="13" rx="1.75" fill="#1F2937"/>
+            <rect x="36.5" y="46" width="2.5" height="11" rx="1.25" fill="#374151"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner fade-up">
+
+    <!-- Availability badge -->
+    <div class="contact-availability">
+      <span class="availability-dot"></span>
+      Available for AI Engineering &amp; Consulting Opportunities
+    </div>
+
+    <div class="section-label" style="text-align:center;">Let's Connect</div>
+    <h2>Let's Build AI That<br>Creates Real Impact</h2>
+    <p class="section-intro" style="margin: 1rem auto; text-align:center;">
+      Open to AI engineering opportunities, consulting engagements, startup collaborations, and innovative AI projects.
+    </p>
+
+    <!-- Primary CTAs -->
+    <div class="contact-actions">
+      <a href="mailto:gopidhanavath1@gmail.com" class="contact-cta">Send me a message →</a>
+      <a href="https://calendly.com/gopidhanavath1/30min" target="_blank" class="contact-cta contact-cta-outline">📅 Book a 30-min call →</a>
+    </div>
+
+    <!-- Social & profile links — gradient expanding pills -->
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/gopi-naik/" target="_blank" class="contact-link" style="--gl-from:#0A66C2;--gl-to:#0e8ef7;">
+        <span class="cl-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </span>
+        <span class="cl-label">LinkedIn</span>
+      </a>
+      <a href="https://github.com/gopinaik28" target="_blank" class="contact-link" style="--gl-from:#6e40c9;--gl-to:#a855f7;">
+        <span class="cl-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </span>
+        <span class="cl-label">GitHub</span>
+      </a>
+      <a href="https://www.rythuai.in" target="_blank" class="contact-link" style="--gl-from:#0D9488;--gl-to:#22d3ee;">
+        <span class="cl-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </span>
+        <span class="cl-label">Rythu AI</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>Designed &amp; built with purpose · Dhanavath Gopi Naik · 2026</p>
+</footer>
+
+<!-- AI CHATBOT WIDGET -->
+<div id="chat-widget">
+  <button id="chat-toggle" aria-label="Open Gopi's AI assistant" title="Ask me anything about Gopi">
+    <span class="chat-avatar-wrap">
+      <video class="chat-avatar-img" autoplay muted loop playsinline>
+        <source src="assets/images/avatar-chat.mp4" type="video/mp4">
+      </video>
+    </span>
+    <span class="chat-close-icon">✕</span>
+    <span class="chat-badge">AI</span>
+  </button>
+  <div id="chat-panel" role="dialog" aria-label="Gopi's AI assistant" aria-modal="true">
+    <div class="chat-header">
+      <div class="chat-header-avatar">
+        <video autoplay muted loop playsinline class="chat-header-video">
+          <source src="assets/images/avatar-chat.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">Gopi's AI Assistant</div>
+        <div class="chat-header-status">
+          <span class="chat-status-dot"></span>
+          Online · Ask me anything
+        </div>
+      </div>
+      <button class="chat-close-btn" id="chat-close" aria-label="Close chat">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg chat-msg-bot">
+        <div class="chat-bubble">
+          Hey there! 🤝 I'm Gopi's AI assistant — ask me anything about his work, projects, or skills.
+        </div>
+      </div>
+      <div class="chat-msg chat-msg-bot">
+        <div class="chat-suggestions">
+          <button class="chat-suggestion">What projects has Gopi built?</button>
+          <button class="chat-suggestion">What are his skills?</button>
+          <button class="chat-suggestion">How can I contact Gopi?</button>
+        </div>
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Ask about Gopi's work…" aria-label="Your message" maxlength="500" autocomplete="off"/>
+      <button id="chat-send" aria-label="Send message">→</button>
+    </div>
+  </div>
+</div>
+
+<!-- JS: skill-bars must load before animations so animateSkillBars is defined -->
+<script src="assets/js/skill-bars.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- 3D effects -->
+<script src="assets/js/hero-canvas.js"></script>
+<script src="assets/js/card-tilt.js"></script>
+<script src="assets/js/chatbot.js"></script>
+</body>
+</html>
